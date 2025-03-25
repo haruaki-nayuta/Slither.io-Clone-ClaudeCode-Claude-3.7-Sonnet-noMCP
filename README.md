@@ -5,6 +5,7 @@
 
 ここから遊べます\
 https://haruaki-nayuta.github.io/Slither.io-Clone-ClaudeCode-Claude-3.7-Sonnet-noMCP/
+
 \
 （このリポジトリのコードはClaudeCodeを用いて作成しました。）
 
