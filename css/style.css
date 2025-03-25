@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#ui-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+#score-display, #fps-display {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#leaderboard {
+    width: 100%;
+}
+
+#leaderboard h3 {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#leaderboard-list li {
+    display: flex;
+    justify-content: space-between;
+    margin: 2px 0;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+#leaderboard-list li.player {
+    background-color: rgba(255, 255, 0, 0.3);
+    font-weight: bold;
+}
+
+#minimap-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#minimap {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #333;
+}
+
+#game-over, #start-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.game-over-content, .start-menu-content {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.game-over-content h2, .start-menu-content h1 {
+    margin-bottom: 20px;
+    color: #ff5500;
+}
+
+.game-over-content div {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+#restart-button, .difficulty-buttons button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff5500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-button:hover, .difficulty-buttons button:hover {
+    background-color: #ff7730;
+}
+
+.difficulty-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.difficulty-buttons button {
+    margin: 0 5px;
+}
+
+.controls-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.controls-info h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}

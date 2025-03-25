@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slither.io シングルプレイヤー</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-container">
+            <div id="score-display">スコア: <span id="score">0</span></div>
+            <div id="fps-display">FPS: <span id="fps">0</span></div>
+            <div id="leaderboard">
+                <h3>リーダーボード</h3>
+                <ul id="leaderboard-list"></ul>
+            </div>
+        </div>
+        <div id="minimap-container">
+            <canvas id="minimap"></canvas>
+        </div>
+        <div id="game-over" class="hidden">
+            <div class="game-over-content">
+                <h2>ゲームオーバー</h2>
+                <div id="final-score">最終スコア: <span>0</span></div>
+                <div id="max-size">最大サイズ: <span>0</span></div>
+                <div id="play-time">プレイ時間: <span>0</span></div>
+                <div id="killed-npcs">倒したNPC数: <span>0</span></div>
+                <div id="high-score">ハイスコア: <span>0</span></div>
+                <button id="restart-button">再スタート</button>
+            </div>
+        </div>
+        <div id="start-menu">
+            <div class="start-menu-content">
+                <h1>Slither.io シングルプレイヤー</h1>
+                <div class="difficulty-selection">
+                    <h3>難易度選択</h3>
+                    <div class="difficulty-buttons">
+                        <button data-difficulty="easy">Easy</button>
+                        <button data-difficulty="normal">Normal</button>
+                        <button data-difficulty="hard">Hard</button>
+                    </div>
+                </div>
+                <div class="controls-info">
+                    <h3>操作方法</h3>
+                    <p>マウスカーソルの方向に移動します</p>
+                    <p>マウスボタンを押し続けると加速します（体の一部を消費）</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Scripts -->
+    <script src="js/constants.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/quadtree.js"></script>
+    <script src="js/entity.js"></script>
+    <script src="js/food.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/npc.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
